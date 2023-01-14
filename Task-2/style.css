@@ -1,0 +1,175 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root {
+	--yellow: #feb60a;
+	--red: #ff0062;
+	--orange: #FF4500;
+	--green: #7CFC00;
+}
+
+body{
+    background: #242423;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.main{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    flex-direction: column;
+}
+.headline span{
+    background: #ee0979;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,
+            #ff6a00,
+            #ee0979);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,
+            #ff6a00,
+            #ee0979);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -mo-text-fill-color: transparent;
+}
+
+.main button{
+    padding: 20px;
+    margin: 30px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(to right,
+    #ff6a00,
+    #ee0979);
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 0 darken( #E1332D, 5%), 2px 4px 6px darken( #E1332D, 2%);
+}
+.main button:hover{
+    box-shadow: 8px 8px #eee;
+    transition: .3s;
+}
+
+.cards {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    padding: 10px;
+    margin: 20px;
+    width: 340px;
+    display: flex;
+    background: linear-gradient(to right,
+    #ff6a00,
+    #ee0979);
+    color: #eee;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    border-radius: 4px;
+    box-shadow: 15px 10px  #eee;
+    transition: 0.1s ease-out;
+}
+
+.card:hover {
+    box-shadow: 8px 8px #eee;
+    transition: .3s;
+}
+
+.card .profile-image img {
+    border-radius: 50%;
+    width: 110px;
+    padding:10px;
+}
+
+.card .card-content {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card .card-content h3 {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.card .card-content h2 {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+
+div.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Loading Animation */
+
+section > div {
+    display: inline-block;
+	justify-content: center;
+	align-items: center;
+	width: 3vw;
+	height: 3vw;
+	border-radius: 100%;
+	margin: 2vw;
+	background-image: linear-gradient(145deg, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0) 100%);
+	animation: bounce 1.5s 0.5s linear infinite;
+}
+.yellow {
+	background-color: var(--yellow);
+}
+
+.red {
+	background-color: var(--red);
+	animation-delay: 0.1s;
+}
+
+.blue {
+	background-color: var(--orange);
+	animation-delay: 0.2s;
+}
+
+.green {
+	background-color: var(--green);
+	animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+	0%, 50%, 100% {
+		transform: scale(1);
+		filter: blur(0px);
+	}
+	25% {
+		transform: scale(0.6);
+		filter: blur(3px);
+	}
+	75% {
+		filter: blur(3px);
+		transform: scale(1.4);
+	}
+}
